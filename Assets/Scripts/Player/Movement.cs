@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -8,11 +6,6 @@ public class Movement : MonoBehaviour
     private float joyspeed;
     private Vector3 move = Vector3.zero;
     private Rigidbody2D rb;
-
-
-
-    //  [Header("Choose player body")]
-    // [SerializeField] Rigidbody2D rb;
 
     [Header("Setting")]
     [SerializeField] float speed;
@@ -45,11 +38,8 @@ public class Movement : MonoBehaviour
             move.x = direction.x;
 
             direction.Normalize();
-
-            // Применяем силу к Rigidbody2D для перемещения объекта
-            //rb.velocity = direction * speed * Time.deltaTime;
-            
         }
+
 
         if (joyspeed == 0.0f) 
         {

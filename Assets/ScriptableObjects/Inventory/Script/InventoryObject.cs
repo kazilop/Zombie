@@ -39,6 +39,31 @@ public class InventoryObject : ScriptableObject
         Container.Items.Add(new InventorySlot(_item.id, _item, _amount));
     }
 
+
+    public void RemoveItem(Item _item, int _amount)
+    {
+        for (int i = 0; i < Container.Items.Count; i++)
+        {
+            if (Container.Items[i].item.id == _item.id)
+            {
+                if(Container.Items[i].amount > 1)
+                {
+                    Container.Items[i].RemoveAmount(_amount);
+                }
+
+                else
+                {
+                    Container.Items[i].RemoveAmount(_amount);
+                    Container.Items.RemoveAt(i);
+                }
+
+                //Container.Items[i].AddAmount(_amount);
+                return;
+            }
+        }
+    }
+
+
     [ContextMenu("Save")]
     public void Save()
     {

@@ -15,7 +15,12 @@ public class DisplayInventory : MonoBehaviour
 
     void Update()
     {
-        UpdateDisplay();
+        if (inventoryPrefab != null)
+        {
+           // CreateDisplay();
+            UpdateDisplay();
+        }
+
     }
 
 
@@ -64,13 +69,11 @@ public class DisplayInventory : MonoBehaviour
 
             if (slot.amount <= 1)
             {
-                //obj.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = "";
 
             }
             else if (slot.amount > 1)
             {
-               // obj.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
             }
 

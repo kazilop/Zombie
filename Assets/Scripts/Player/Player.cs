@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Collision");
         var item = other.GetComponent<GroundItem>();
         if(item != null)
         {

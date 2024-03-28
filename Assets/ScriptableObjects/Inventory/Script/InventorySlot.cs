@@ -1,3 +1,5 @@
+using UnityEngine;
+
 [System.Serializable]
 public class InventorySlot
 {
@@ -18,4 +20,31 @@ public class InventorySlot
     {
         amount += value;
     }
+
+
+    public void RemoveAmount(int value)
+    {
+        amount -= value;
+    }
+
+
+    public void OnClick()
+    {
+        Debug.Log("SLOT");
+    }
+
+
+
+    /*
+    public void OnClick()
+    {
+        // Проверка на наличие предмета
+        if (inventory.inventoryItems[slotIndex] != null)
+        {
+            // Удаление предмета из инвентаря и ячейки
+            inventory.RemoveItem(inventory.inventoryItems[slotIndex]);
+            itemIcon.sprite = null;
+        }
+    }
+    */
 }
