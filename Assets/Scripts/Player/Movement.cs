@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     [Header("Bullet")]
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
+   
 
     private void Start()
     {

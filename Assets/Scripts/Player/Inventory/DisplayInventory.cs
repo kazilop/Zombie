@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class DisplayInventory : MonoBehaviour
 {
@@ -11,13 +12,13 @@ public class DisplayInventory : MonoBehaviour
     public InventoryObject inventory;
 
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
-     
+
 
     void Update()
     {
         if (inventoryPrefab != null)
         {
-           // CreateDisplay();
+            //CreateDisplay();
             UpdateDisplay();
         }
 

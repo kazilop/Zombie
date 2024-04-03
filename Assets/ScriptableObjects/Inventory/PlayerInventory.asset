@@ -20,9 +20,14 @@ MonoBehaviour:
       item:
         name: Pistol
         id: 2
-      amount: 1
+      amount: 5
     - ID: 1
       item:
         name: HealPotion
         id: 1
-      amount: 1
+      amount: 3
+    - ID: 0
+      item:
+        name: AK74
+        id: 0
+      amount: 5

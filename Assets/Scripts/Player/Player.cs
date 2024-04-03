@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
     public InventoryObject inventory;
@@ -14,7 +15,6 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision");
         var item = other.GetComponent<GroundItem>();
         if(item != null)
         {
@@ -26,6 +26,20 @@ public class Player : MonoBehaviour
     private void OnApplicationQuit()
     {
         inventory.Save();
-       // inventory.Container.Items.Clear();
+
+        //Очистка 
+       //inventory.Container.Items.Clear();
+    }
+
+
+    public void Die()
+    {
+        Debug.Log("DIE !");
+    }
+
+
+    public void InventoryRemoveQnty(Item item, int amount)
+    {
+        inventory.RemoveItem(item, amount);
     }
 }
